@@ -12,8 +12,19 @@
  * 輸入: ([{ id: 1, task: 'Buy milk', completed: false }], 'Walk the dog')
  * 輸出: [{ id: 1, task: 'Buy milk', completed: false }, { id: 2, task: 'Walk the dog', completed: false }]
  */
-
+interface Todo {
+    id: number;
+    task: string;
+    completed: boolean;
+}
 export function addTodo(todos: Todo[], task: string): Todo[] {
     // 在此實現函式
+    const newTodo: Todo = {
+        id: todos.length + 1 ,
+        task: task,
+        completed: false  // 新待办事项默认为未完成状态
+    };
+
+    // 将新待办事项添加到数组中并返回新数组
     return [...todos, newTodo];
 }
