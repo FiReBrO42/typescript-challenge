@@ -19,7 +19,7 @@ export function arraySum(numbers: number[]): number {
     }
     let ans:number = 0
     numbers.forEach((num)=>{
-        ans += num
+        ans += num ;
     })
     return ans
 }
